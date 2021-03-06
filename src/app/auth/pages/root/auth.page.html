@@ -2,11 +2,31 @@
     <ion-toolbar>
         <h1>Angular Costa Rica</h1>
     </ion-toolbar>
-    <div class="group">
-        <img src="../../../../assets//images/logo-angular.png" alt="Angular Logo" />
-    </div>
-    <section class="auth-buttons">
-        <ion-button class="primary-button">Register</ion-button>
-        <ion-button class="primary-button">Login</ion-button>
+    <section *ngIf="rootSection">
+        <div class="group">
+            <img src="../../../../assets//images/logo-angular.png" alt="Angular Logo" />
+        </div>
+        <section class="auth-buttons">
+            <ion-button class="primary-button" (click)="changeSection('signUpSection')">Register</ion-button>
+            <ion-button class="primary-button" (click)="changeSection('loginSection')">Login</ion-button>
+        </section>
+    </section>
+    <section *ngIf="loginSection">
+        <div class="group">
+            <img src="../../../../assets//images/logo-angular.png" alt="Angular Logo" />
+        </div>
+        <section class="auth-buttons">
+            <h1>LOGIN</h1>
+            <ion-button class="primary-button" (click)="changeSection('rootSection')">Back</ion-button>
+        </section>
+    </section>
+    <section *ngIf="signUpSection">
+        <div class="group">
+            <img src="../../../../assets//images/logo-angular.png" alt="Angular Logo" />
+        </div>
+        <section class="auth-buttons">
+            <h1>sign up</h1>
+            <ion-button class="primary-button" (click)="changeSection('rootSection')">Back</ion-button>
+        </section>
     </section>
 </ion-content>
