@@ -1,0 +1,7 @@
+{
+  "name": "angularcr-mobiledev",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
