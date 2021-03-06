@@ -1,0 +1,27 @@
+:host {
+    ion-content {
+        background-repeat: round;
+        overflow-y: hidden;
+        overflow-x: hidden;
+    }
+    .group {
+        position: absolute;
+        bottom: 35%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        img {
+            width: 100%;
+        }
+    }
+    .auth-buttons {
+        position: absolute;
+        bottom: 10%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        padding: 30px;
+    }
+}

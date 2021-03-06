@@ -9,18 +9,40 @@
  * https://ionicframework.com/docs/layout/global-stylesheets
  */
 
+
 /* Core CSS required for Ionic components to work properly */
+
 @import "~@ionic/angular/css/core.css";
 
 /* Basic CSS for apps built with Ionic */
+
 @import "~@ionic/angular/css/normalize.css";
 @import "~@ionic/angular/css/structure.css";
 @import "~@ionic/angular/css/typography.css";
-@import '~@ionic/angular/css/display.css';
+@import "~@ionic/angular/css/display.css";
 
 /* Optional CSS utils that can be commented out */
+
 @import "~@ionic/angular/css/padding.css";
 @import "~@ionic/angular/css/float-elements.css";
 @import "~@ionic/angular/css/text-alignment.css";
 @import "~@ionic/angular/css/text-transformation.css";
 @import "~@ionic/angular/css/flex-utils.css";
+ion-button.primary-button {
+    --background: var(--ion-color-aqua-gradient);
+    --border-radius: 16px;
+    width: 85%;
+    font-weight: bold;
+    font-size: medium;
+}
+
+ion-toolbar {
+    --border-radius: 16px;
+    --color: var(--ion-color-aqua-dark);
+    text-transform: uppercase;
+    text-align: center;
+    justify-content: center;
+    border-bottom: 4px solid var(--ion-color-primary-dark);
+    font-weight: bold;
+    font-size: 18px;
+}
