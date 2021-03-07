@@ -1,6 +1,6 @@
 <ion-content>
     <ion-toolbar>
-        <h1 class="light">Developer Scape</h1>
+        <h1 class="light">Dev Scapes</h1>
     </ion-toolbar>
     <!-- * Root Auth Section -->
     <section *ngIf="rootSection">
@@ -18,18 +18,32 @@
             <h2 class="primary">Sign Up</h2>
             <ion-item>
                 <ion-label position="floating">Email</ion-label>
-                <ion-input></ion-input>
+                <ion-input [ngModel]="user.email"></ion-input>
+            </ion-item>
+            <ion-item>
+                <ion-label position="floating">Username</ion-label>
+                <ion-input [ngModel]="user.username"></ion-input>
             </ion-item>
             <ion-item>
                 <ion-label position="floating">Name</ion-label>
-                <ion-input></ion-input>
+                <ion-input [ngModel]="user.name"></ion-input>
             </ion-item>
             <ion-item>
                 <ion-label position="floating">Last Name</ion-label>
-                <ion-input></ion-input>
+                <ion-input [ngModel]="user.lastName"></ion-input>
+            </ion-item>
+            <ion-item>
+                <ion-label position="floating">Password</ion-label>
+                <ion-input type="password" [ngModel]="signUpFields.password"></ion-input>
+            </ion-item>
+            <ion-item>
+                <ion-label position="floating">Confirm Password</ion-label>
+                <ion-input type="password" [ngModel]="signUpFields.repeatedPassword"></ion-input>
             </ion-item>
         </div>
         <section class="auth-buttons">
+            <ion-button class="primary-button" (click)="signUp()">sign Up</ion-button>
+
             <ion-button class="primary-button" (click)="changeSection('rootSection')">Back</ion-button>
         </section>
     </section>

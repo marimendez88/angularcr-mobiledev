@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { LoadingController } from '@ionic/angular';
 import { User } from '../../../models/index';
 
 @Component({
@@ -7,13 +8,25 @@ import { User } from '../../../models/index';
   styleUrls: ['auth.page.scss'],
 })
 export class AuthPage implements OnInit {
-  constructor() {}
+  constructor(private loadingSpinner: LoadingController) {}
 
   loginSection: boolean;
   forgotSection: boolean;
   signUpSection: boolean = true;
   rootSection: boolean;
 
+  user: User = {
+    id: null,
+    username: null,
+    name: null,
+    lastName: null,
+    email: null,
+  };
+
+  signUpFields = {
+    password: null,
+    repeatedPassword: null,
+  };
   ngOnInit() {}
 
   changeSection(key: string) {
@@ -48,6 +61,14 @@ export class AuthPage implements OnInit {
         this.signUpSection = false;
         this.forgotSection = false;
         break;
+    }
+  }
+
+  async signUp() {
+    const loading = await this.loadingSpinner.create();
+    loading.present();
+    if (this.user.email) {
+      console.log(this.user);
     }
   }
 }
