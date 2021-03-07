@@ -13,7 +13,7 @@ export class AuthPage implements OnInit {
   loginSection: boolean;
   forgotSection: boolean;
   signUpSection: boolean;
-  rootSection: boolean = true;
+  rootSection: boolean;
 
   user: User = {
     id: null,
@@ -27,7 +27,9 @@ export class AuthPage implements OnInit {
     password: null,
     repeatedPassword: null,
   };
-  ngOnInit() {}
+  ngOnInit() {
+    this.rootSection = true;
+  }
 
   changeSection(key: string) {
     switch (key) {
