@@ -55,3 +55,20 @@ ion-toolbar {
     font-weight: bold;
     font-size: 18px;
 }
+
+ion-item {
+    --border-radius: 16px;
+    --border-color: var(--ion-color-aqua-dark);
+    --color: var(--ion-color-primary-light);
+    display: contents;
+    width: 90%;
+    font-size: 16px;
+}
+
+.form-content {
+    --color: var(--ion-color-aqua-dark);
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin-top: 20%;
+}

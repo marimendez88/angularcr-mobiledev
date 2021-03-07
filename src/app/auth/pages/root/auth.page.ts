@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { User } from '../../../models/index';
 
 @Component({
   selector: 'app-auth',
@@ -9,8 +10,9 @@ export class AuthPage implements OnInit {
   constructor() {}
 
   loginSection: boolean;
-  signUpSection: boolean;
-  rootSection: boolean = true;
+  forgotSection: boolean;
+  signUpSection: boolean = true;
+  rootSection: boolean;
 
   ngOnInit() {}
 
@@ -20,19 +22,31 @@ export class AuthPage implements OnInit {
         this.loginSection = true;
         this.signUpSection = false;
         this.rootSection = false;
+        this.forgotSection = false;
         break;
       case 'signUpSection':
-        this.loginSection = false;
         this.signUpSection = true;
+        this.loginSection = false;
         this.rootSection = false;
+        this.forgotSection = false;
         break;
       case 'rootSection':
+        this.rootSection = true;
         this.loginSection = false;
         this.signUpSection = false;
-        this.rootSection = true;
+        this.forgotSection = false;
         break;
-
+      case 'forgotSection':
+        this.forgotSection = true;
+        this.loginSection = false;
+        this.signUpSection = false;
+        this.rootSection = false;
+        break;
       default:
+        this.rootSection = true;
+        this.loginSection = false;
+        this.signUpSection = false;
+        this.forgotSection = false;
         break;
     }
   }
