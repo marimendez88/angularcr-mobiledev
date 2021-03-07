@@ -12,8 +12,8 @@ export class AuthPage implements OnInit {
 
   loginSection: boolean;
   forgotSection: boolean;
-  signUpSection: boolean = true;
-  rootSection: boolean;
+  signUpSection: boolean;
+  rootSection: boolean = true;
 
   user: User = {
     id: null,
