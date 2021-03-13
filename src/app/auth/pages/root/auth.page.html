@@ -1,12 +1,60 @@
 <ion-content>
     <ion-toolbar>
-        <h1>Angular Costa Rica</h1>
+        <h1 class="light">Dev Scapes</h1>
     </ion-toolbar>
-    <div class="group">
-        <img src="../../../../assets//images/logo-angular.png" alt="Angular Logo" />
-    </div>
-    <section class="auth-buttons">
-        <ion-button class="primary-button">Register</ion-button>
-        <ion-button class="primary-button">Login</ion-button>
+    <!-- * Root Auth Section -->
+    <section *ngIf="rootSection">
+        <div class="group">
+            <img src="../../../../assets//images/logo-angular.png" alt="Angular Logo" />
+        </div>
+        <section class="auth-buttons">
+            <ion-button class="primary-button" (click)="changeSection('signUpSection')">Register</ion-button>
+            <ion-button class="primary-button" (click)="changeSection('loginSection')">Login</ion-button>
+        </section>
+    </section>
+    <!-- * SignUp  Auth Section -->
+    <section *ngIf="signUpSection">
+        <div class="form-content">
+            <h2 class="primary">Sign Up</h2>
+            <ion-item>
+                <ion-label position="floating">Email</ion-label>
+                <ion-input [ngModel]="user.email"></ion-input>
+            </ion-item>
+            <ion-item>
+                <ion-label position="floating">Username</ion-label>
+                <ion-input [ngModel]="user.username"></ion-input>
+            </ion-item>
+            <ion-item>
+                <ion-label position="floating">Name</ion-label>
+                <ion-input [ngModel]="user.name"></ion-input>
+            </ion-item>
+            <ion-item>
+                <ion-label position="floating">Last Name</ion-label>
+                <ion-input [ngModel]="user.lastName"></ion-input>
+            </ion-item>
+            <ion-item>
+                <ion-label position="floating">Password</ion-label>
+                <ion-input type="password" [ngModel]="signUpFields.password"></ion-input>
+            </ion-item>
+            <ion-item>
+                <ion-label position="floating">Confirm Password</ion-label>
+                <ion-input type="password" [ngModel]="signUpFields.repeatedPassword"></ion-input>
+            </ion-item>
+        </div>
+        <section class="auth-buttons">
+            <ion-button class="primary-button" (click)="signUp()">sign Up</ion-button>
+
+            <ion-button class="primary-button" (click)="changeSection('rootSection')">Back</ion-button>
+        </section>
+    </section>
+    <!-- * Login Auth Section -->
+    <section *ngIf="loginSection">
+        <div class="group">
+            <img src="../../../../assets//images/logo-angular.png" alt="Angular Logo" />
+        </div>
+        <section class="auth-buttons">
+            <h1>LOGIN</h1>
+            <ion-button class="primary-button" (click)="changeSection('rootSection')">Back</ion-button>
+        </section>
     </section>
 </ion-content>

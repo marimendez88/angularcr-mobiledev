@@ -17,8 +17,8 @@ h1 {
     &.center {
         text-align: center;
     }
-    &.purple {
-        color: var(--ion-color-primary-medium);
+    &.primary {
+        color: var(--ion-color-primary-light);
     }
     &.white {
         color: var(--ion-color-white);
@@ -33,11 +33,8 @@ h1 {
 
 h2 {
     font-size: 32px;
-    &.dark-purple {
-        color: var(--ion-color-primary-dark);
-    }
-    &.purple {
-        color: var(--ion-color-primary-medium);
+    &.primary {
+        color: var(--ion-color-primary-light);
     }
     &.white {
         color: var(--ion-color-white);
@@ -58,13 +55,7 @@ h2 {
 
 h3 {
     font-size: 26px;
-    &.dark-purple {
-        color: var(--ion-color-primary-dark);
-    }
-    &.purple {
-        color: var(--ion-color-primary-medium);
-    }
-    &.light-purple {
+    &.primary {
         color: var(--ion-color-primary-light);
     }
     &.white {
@@ -86,11 +77,8 @@ h3 {
 
 h4 {
     font-size: 26px;
-    &.dark-purple {
-        color: var(--ion-color-primary-dark);
-    }
-    &.purple {
-        color: var(--ion-color-primary-medium);
+    &.primary {
+        color: var(--ion-color-primary-light);
     }
     &.white {
         color: var(--ion-color-white);
@@ -111,11 +99,8 @@ h4 {
 
 h5 {
     font-size: 20px;
-    &.dark-purple {
-        color: var(--ion-color-primary-dark);
-    }
-    &.purple {
-        color: var(--ion-color-primary-medium);
+    &.primary {
+        color: var(--ion-color-primary-light);
     }
     &.white {
         color: var(--ion-color-white);
@@ -174,13 +159,7 @@ p {
     &.uppercase {
         text-transform: uppercase;
     }
-    &.dark-purple {
-        color: var(--ion-color-primary-dark);
-    }
-    &.purple {
-        color: var(--ion-color-primary-medium);
-    }
-    &.light-purple {
+    &.primary {
         color: var(--ion-color-primary-light);
     }
     &.gray {
